@@ -1,0 +1,54 @@
+/*!
+ * a simple wizard with Twitter Bootstrap
+ * https://github.com/twbs/bootstrap/issues/1982
+ * https://github.com/vaneves
+ *
+ * Copyright 2014, vaneves
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://www.opensource.org/licenses/GPL-2.0
+ */
+.wizard {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: #F5F5F5;
+	height: 10px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #CCC;
+	box-shadow: inset 0px 1px 0px 0px #CCC;
+	list-style: none;
+	margin-bottom: 40px;
+	margin-top: 25px;
+}
+
+.wizard li {
+	display: table-cell;
+	width: 1%;
+	float: none;
+	text-align: center;
+}
+
+.wizard li span {
+	display: block;
+	width: 30px;
+	height: 25px;
+	background: #F5F5F5;
+	text-align: center;
+	color: #999;
+	margin: auto;
+	margin-top: -10px;
+	font-size: 1.1em;
+	font-weight: bold;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+	-webkit-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+	box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.15);
+}
+
+.wizard li.active span {
+	background: #0088CC;
+	color: #FFF;
+}
