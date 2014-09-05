@@ -673,12 +673,13 @@ public class ServHttpClient {
 			forceCloseConnection(request);
 		try {
 			clientCookieConfig(request);
+			logger.debug("==> {}", request.getRequestLine());
 			HttpResponse resp = httpClient.execute(request, httpContext);
 			int status = resp.getStatusLine().getStatusCode();
-			logger.debug("==> status code: {}", status);
+			logger.debug("<== status code: {}", status);
 			HttpEntity entity = resp.getEntity();
 			String data = EntityUtils.toString(entity, respEncoding);
-			logger.debug("==> resp in string: {}", data);
+			logger.debug("<== resp in string: {}", data);
 			if(status == HttpStatus.SC_OK){
 				return new Message<String>(Status.SUCCESS, "Http request success", data);
 			} else {
@@ -700,12 +701,13 @@ public class ServHttpClient {
 		HttpEntity entity = null;
 		try {
 			clientCookieConfig(request);
+			logger.debug("==> {}", request.getRequestLine());
 			HttpResponse resp = httpClient.execute(request, httpContext);
 			int status = resp.getStatusLine().getStatusCode();
-			logger.debug("==> status code: {}", status);
+			logger.debug("<== status code: {}", status);
 			entity = resp.getEntity();
 			byte[] data = EntityUtils.toByteArray(entity);
-			logger.debug("==> resp in byte[]: {}", data);
+			logger.debug("<== resp in byte[]: {}", data);
 			if(status == HttpStatus.SC_OK){
 				return new Message<byte[]>(Status.SUCCESS, "Http request success", data);
 			} else {
