@@ -18,7 +18,7 @@ public class CtrlAPI extends BaseCtrlSpringmvc {
 	
 	public static final String PAGE_PATH_PREFIX = "/sso";
 	
-	@RequestMapping(value="/verify/usr-pwd.do")
+	@RequestMapping(value="/verify/usrpwd.do")
 	public void verifyUserPwd(HttpServletRequest req, HttpServletResponse resp, String code) {
 		// parse and validate
 		JSONObject data = getData(req, code);
